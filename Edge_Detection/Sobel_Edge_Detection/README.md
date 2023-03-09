@@ -1,4 +1,3 @@
-This is the code for the following tutorial.
-
+### Code for some of the prevelant Edge-Detection Algorithms
 
 
