@@ -150,6 +150,6 @@ if __name__ == '__main__':
 
     new_image = hysteresis(new_image, weak)
 
-    plt.imshow(new_image, cmap='gray')
+    plt.imshow(new_image, cmap="gray")
     plt.title("Canny Edge Detector")
     plt.show()

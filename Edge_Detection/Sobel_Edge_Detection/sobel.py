@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from convolution import convolution
 from gaussian_smoothing import gaussian_blur
 
-
+ 
 def sobel_edge_detection(image, filter, verbose=False):
     new_image_x = convolution(image, filter, verbose)
 
@@ -41,5 +41,9 @@ if __name__ == '__main__':
     args = vars(ap.parse_args())
 
     image = cv2.imread(args["image"])
-    image = gaussian_blur(image, 9, verbose=True)
-    sobel_edge_detection(image, filter, verbose=True)
+    image = gaussian_blur(image, 9, verbose=False)
+    new_image = sobel_edge_detection(image, filter, verbose=False)
+    
+    plt.imshow(new_image, cmap='gray')
+    plt.title("Sobel Edge Detector")
+    plt.show()
